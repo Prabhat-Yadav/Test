@@ -1,6 +1,8 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
+var cmd=require('node-cmd');
+
 const branch = require('git-branch');
 const branchName = require('current-git-branch');
 
@@ -16,26 +18,23 @@ function activate(context) {
 
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "uuid" is now active!');
+	console.log('Congratulations, extension "uuid" is now active!');
+
+	//Time.diff(date, Time.sub(date, { D: 1 }), '{D} days {s} seconds')
+	
+	// var folderPath = vscode.workspace.folderPath
+	let folderPath = vscode.workspace.rootPath;
 
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('extension.helloWorld', function () {
-		// The code you place here will be executed every time your command is executed
 
-		// Display a message box to the user
-		let x = branchName();
-
-		if(x){
-			vscode.window.showInformationMessage('Hello');
-		}
-		else{
-			vscode.window.showInformationMessage('Something');
-		}
-		console.log(x)
-
-		vscode.window.showInformationMessage(x);
+		branch(`${folderPath}`)
+			.then(name =>{
+				vscode.window.showInformationMessage(name)}) //=> 'master'
+			.catch(console.error);
+		
 	});
 
 	context.subscriptions.push(disposable);
