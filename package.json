@@ -38,6 +38,8 @@
 	"dependencies": {
 		"current-git-branch": "^1.1.0",
 		"git-branch": "^2.0.1",
-		"node-cmd": "^3.0.0"
+		"node-cmd": "^3.0.0",
+		"print-message": "^3.0.1",
+		"vscode-express": "^1.0.1"
 	}
 }

@@ -1,10 +1,10 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
-var cmd=require('node-cmd');
+//var cmd=require('node-cmd');
 
 const branch = require('git-branch');
-const branchName = require('current-git-branch');
+//const branchName = require('current-git-branch');
 
 
 
@@ -29,11 +29,17 @@ function activate(context) {
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('extension.helloWorld', function () {
-
+		if (folderPath)
+		{
 		branch(`${folderPath}`)
 			.then(name =>{
-				vscode.window.showInformationMessage(name)}) //=> 'master'
+				vscode.window.setStatusBarMessage(name)}) //=> 'master'
 			.catch(console.error);
+		}
+		else
+		{
+		vscode.window.setStatusBarMessage("NO REPO")
+		}
 		
 	});
 
