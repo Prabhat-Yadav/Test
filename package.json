@@ -26,6 +26,7 @@
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
+		"@types/jquery": "^3.3.31",
 		"@types/mocha": "^5.2.7",
 		"@types/node": "^12.11.7",
 		"@types/vscode": "^1.39.0",
@@ -36,10 +37,37 @@
 		"vscode-test": "^1.2.2"
 	},
 	"dependencies": {
+		"@types/request": "^2.48.3",
+		"all-the-package-repos": "^1.272.0",
+		"app-root-path": "^3.0.0",
+		"bindings": "^1.5.0",
 		"current-git-branch": "^1.1.0",
+		"debug": "^4.1.1",
+		"dont-break-dependents": "^0.1.0",
+		"download-git-repo": "^3.0.2",
+		"etiquette": "^2.3.1",
+		"get-pkg": "^1.1.0",
+		"get-repository-url": "^2.0.0",
+		"gh-clone": "^2.0.1",
+		"git": "^0.1.5",
 		"git-branch": "^2.0.1",
+		"git-repo": "^0.1.1",
+		"git-repo-info": "^2.1.1",
+		"git-repo-name": "^1.0.1",
+		"github-traffic": "^0.1.2",
+		"gulp-format-md": "^2.0.0",
+		"nan": "^2.14.0",
 		"node-cmd": "^3.0.0",
+		"nodegit": "^0.26.2",
+		"npm": "^6.13.0",
+		"npm-pkg-stats": "^1.4.0",
+		"package": "^1.0.1",
+		"parse-github-url": "^1.0.2",
 		"print-message": "^3.0.1",
-		"vscode-express": "^1.0.1"
+		"puppeteer-github": "0.0.5",
+		"simple-git": "^1.126.0",
+		"use-countdown-timer": "^1.1.1",
+		"vscode-express": "^1.0.1",
+		"zed-is-dead": "^0.1.0"
 	}
 }
