@@ -10,14 +10,23 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.teest"
 	],
 	"main": "./extension.js",
 	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+			  {
+				"id": "prabhat",
+				"title": "Prabhat",
+				"icon": "media/dep.png"
+			  }
+			]
+		  },
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.teest",
+				"title": "teest"
 			}
 		]
 	},
