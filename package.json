@@ -78,5 +78,6 @@
 		"use-countdown-timer": "^1.1.1",
 		"vscode-express": "^1.0.1",
 		"zed-is-dead": "^0.1.0"
-	}
+	},
+	"publisher" : "prabhaat"
 }
