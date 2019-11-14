@@ -2,7 +2,7 @@
 	"name": "uuid",
 	"displayName": "uuid",
 	"description": "",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"engines": {
 		"vscode": "^1.39.0"
 	},
@@ -79,5 +79,5 @@
 		"vscode-express": "^1.0.1",
 		"zed-is-dead": "^0.1.0"
 	},
-	"publisher" : "prabhaat"
+	"publisher": "prabhaat"
 }
