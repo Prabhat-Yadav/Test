@@ -2,7 +2,7 @@
 	"name": "uuid",
 	"displayName": "uuid",
 	"description": "",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.39.0"
 	},
@@ -16,13 +16,13 @@
 	"contributes": {
 		"viewsContainers": {
 			"activitybar": [
-			  {
-				"id": "prabhat",
-				"title": "Prabhat",
-				"icon": "media/dep.png"
-			  }
+				{
+					"id": "prabhat",
+					"title": "Prabhat",
+					"icon": "media/dep.png"
+				}
 			]
-		  },
+		},
 		"commands": [
 			{
 				"command": "extension.teest",
