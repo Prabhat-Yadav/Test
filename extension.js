@@ -24,9 +24,7 @@ function activate(context) {
 					 vscode.window.showInformationMessage(yuyuyu);
 					console.log(yuyuyu);
 					vscode.window.onDidChangeActiveTerminal(yuyuyu);
-					setInterval ( () => {
 						vscode.window.setStatusBarMessage("GitSwirl [Repository]: "+ reponame + " [Branch]: "+ name);
-					}, 5000)
 					
 				  });
 					
