@@ -1,5 +1,5 @@
-const vscode = require('vscode');
-var repoName = require('git-repo-name');
+import * as vscode from 'vscode';
+const branch = require('git-branch');
 
 const branch = require('git-branch');
 // var getRepoInfo = require('git-repo-info');
@@ -10,7 +10,7 @@ const branch = require('git-branch');
 /**
  * @param {vscode.ExtensionContext} context
  */
-function activate(context) {
+export function activate(context: vscode.ExtensionContext)  {
 
 	let folderPath = vscode.workspace.rootPath;
 	let yuyuyu = vscode.window.onDidChangeWindowState;
@@ -21,20 +21,17 @@ function activate(context) {
 			branch(`${folderPath}`)
 				.then(name => {
 				 repoName(folderPath, function(err, reponame) {
-					 vscode.window.showInformationMessage(yuyuyu);
-					console.log(yuyuyu);
-					vscode.window.onDidChangeActiveTerminal(yuyuyu);
-					setInterval ( () => {
-						vscode.window.setStatusBarMessage("GitSwirl [Repository]: "+ reponame + " [Branch]: "+ name);
-					}, 5000)
-					
-				  });
+					 vscode.window.showInformationMessage(yuyuyu)
+
+					vscode.window.set
+					vscode.window.setStatusBarMessage("GitSwirl AAAAAAAAA  [Repository]: "+ reponame + " [Branch]: "+ name);
+				});
 					
 				}) //=> 'master'
 				.catch(console.error);
 		}
 		else {
-			vscode.window.setStatusBarMessage("NO REPO Please Enter Into A Repo")
+			vscode.window.setStatusBarMessage("NO REPO ddddd Please Enter Into A Repo")
 			
 		}
 		
@@ -49,5 +46,4 @@ exports.activate = activate;
 function deactivate() { }
 module.exports = {
 	activate,
-	deactivate
-}
+export function	deactivate()}
